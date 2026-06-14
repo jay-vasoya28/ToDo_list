@@ -10,8 +10,8 @@ add.addEventListener("click",() => {
                 <h3>${input.value}</h3>
                 <div class="li-btn">
                     <button class="edit"><i class="ri-edit-line"></i></button>
-                    <button class="delete"><i class="ri-delete-bin-5-line"></i></button>
                     <button class="done-btn"><i class="ri-check-line"></i></button>
+                    <button class="delete"><i class="ri-delete-bin-5-line"></i></button>
                 </div>
             </div>`
 
