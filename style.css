@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-size: 10px;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    height: 60vh;
+    width: 60vw;
+    background-color: rgba(30,41,59,0.95);
+    border: 1px solid #334155;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+.todo-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color: red; */
+}
+
+.todo-bar input{
+    padding: 1rem 2rem;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 1.2rem;
+    font-size: 2.2rem;
+    outline: none;
+    color: #f8fafc;
+}
+
+.todo-bar input::placeholder{
+    color: #94a3b8;
+}
+
+input:focus{
+    border-color: #3b82f6;
+    box-shadow: 0 0 10px rgba(59,130,246,.4);
+}
+
+.todo-bar #main-btn{
+    padding: 1rem 3rem;
+    font-size: 2.2rem;
+    border-radius: 1.2rem;
+    border: none;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.todo-bar #main-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59,130,246,.35);
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.task .li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #334155;
+    border: 1px solid #475569;
+    border-radius: 0.7rem;
+    padding: 1.5rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.li:hover{
+    transform: translateY(-3px);
+    border-color: #64748b;
+}
+
+.task .li h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #f8fafc;
+}
+
+.task .li .li-btn{
+    display: flex;
+    gap: 2rem;
+}
+
+.task .li button{
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task .li button i{
+    font-size: 2rem;
+    color: white;
+}
+
+.edit{
+    background-color: #f59e0b;
+}
+
+.edit:hover{
+    box-shadow: 0 8px 20px rgba(245,158,11,.35);
+}
+
+.delete{
+    background-color: #ef4444;
+}
+
+.delete:hover{
+    box-shadow: 0 8px 20px rgba(239,68,68,.35);
+}
+
+.done-btn{
+    background-color: #22c55e;
+}
+
+.done-btn:hover{
+    box-shadow: 0 8px 20px rgba(34,197,94,.35);
+}
+
+.alldone{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+button{
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    main{
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .todo-bar{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .todo-bar input{
+        width: 100%;
+    }
+
+    .todo-bar button{
+        width: 100%;
+    }
+
+    .task{
+        gap: 3rem;
+    }
+
+    .task .li{
+        padding: 0;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    .task .li h3{
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 2rem;
+        background-color: #334155;
+        border: 1px solid #475569;
+        border-radius: 0.7rem;
+    }
+
+    .task .li .li-btn{
+        width: 100%;
+        gap: 0.5rem;
+        justify-content: space-evenly;
+    }
+
+    .task .li button{
+        width: fit-content;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
