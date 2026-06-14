@@ -44,11 +44,9 @@ todo.addEventListener("click", (e) => {
         if(task.classList.toggle("alldone")){
             icon.className = "ri-arrow-go-back-line"
             e.target.closest(".li").style.opacity = "0.6";
-            e.target.closest(".done-btn").classList.toggle("undo-btn")
         }else{
             icon.className = "ri-check-line";
             e.target.closest(".li").style.opacity = "1";
-            e.target.closest(".done-btn").classList.toggle("undo-btn")
             e.target.closest(".done-btn").st
         }
     }
