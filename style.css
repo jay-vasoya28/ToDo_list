@@ -54,7 +54,7 @@ main{
     color: #94a3b8;
 }
 
-input:focus{
+.todo-bar input:focus{
     border-color: #3b82f6;
     box-shadow: 0 0 10px rgba(59,130,246,.4);
 }
@@ -105,6 +105,15 @@ input:focus{
     font-size: 2.5rem;
     font-weight: 500;
     color: #f8fafc;
+}
+
+.task .li input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    color: #f8fafc;
+    font-weight: 300;
 }
 
 .task .li .li-btn{
@@ -167,7 +176,7 @@ button:hover{
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     main{
         width: 80vw;
         height: 70vh;
@@ -208,6 +217,16 @@ button:hover{
         background-color: #334155;
         border: 1px solid #475569;
         border-radius: 0.7rem;
+    }
+
+    .task .li input{
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        background-color: #334155;
+        padding: 0.5rem;
+        border-radius: 0.7rem;
+        border: 1px solid #475569;
     }
 
     .task .li .li-btn{

@@ -28,11 +28,20 @@ todo.addEventListener("click", (e) => {
     if (e.target.closest(".edit")) {
 
         let task = e.target.closest(".li").querySelector("h3");
+        let newIn = document.createElement("input")
+        let newTask = document.createElement("h3")
+        let newIntask = e.target.closest(".li").querySelector("input");
+        let editIcon = e.target.closest(".edit").querySelector("i")
 
-        let newTask = prompt("Edit Task", task.textContent);
-
-        if (newTask && newTask.trim() !== "") {
-            task.textContent = newTask;
+        if(e.target.closest(".edit").classList.toggle("pn")){
+            task.replaceWith(newIn)
+            newIn.value = task.textContent
+            newIn.focus()
+            editIcon.className = "ri-edit-fill"
+        }else{
+            newIntask.replaceWith(newTask)
+            newTask.textContent = newIntask.value
+            editIcon.className = "ri-edit-line"
         }
     }
 
